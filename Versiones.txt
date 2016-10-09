@@ -1,0 +1,138 @@
+Cambios en las versiones
+-El primer dígito del número de la versión indica las entregas finales del mod (actualmente beta)
+-El segundo dígito aumenta cuando se hacen actualizaciones mayores al mod
+-El tercer dígito aumenta cada que se compila el código escrito al ejecutar en eclipse cuando se desarrolla
+
+v0.9.??? Tercera entrega oficial [Beta]
+    Agregada la interfaz para los accesorios (GUI accesorios). Clic en el botón accesorios del inventario o shift+clic derecho mientras tienes un accesorio en la mano para abrir esta interfaz
+    Agregados los objetos accesorios; dotan al jugador de efectos útiles al equiparselos en la nueva interfaz de accesorios: 
+        Dije antiveneno.- cura el envenenamiento, 30% probabilidad cada 5 segundos
+        Dije antivírico.- cura el hambre, 30% probabilidad cada 5 segundos
+        Dije antipesadez.- cura la lentitud, 30% probabilidad cada 5 segundos
+        Dije antidebilidad.- cura la debilidad, 30% probabilidad cada 5 segundos
+        Marca sagrada.- regenera 1% de salud periódicamente cada 5 segundos (equipar dos simultáneamente reduce el tiempo de activación a la mitad, a 2.5 s.)
+        Símbolo sagrado.- regenera 3% de salud periódicamente cada 5 segundos (equipar dos simultáneamente reduce el tiempo de activación a la mitad, a 2.5 s.)
+        Marca de salud.- recupera 3% de salud al derrotar a un enemigo
+        Símbolo de salud.- recupera 6% de salud al derrotar a un enemigo
+        Marca de mana.- recupera 1 unidad de hambre al derrotar a un enemigo
+        Símbolo de mana.- recupera 2 unidades de hambre al derrotar a un enemigo
+    Los efectos de pociones de Emilnator ahora solo se aplican si el jugador ataca con una espada
+        Si la espada con que el jugador ataca es la espada eterna, los efectos siempre son aplicados
+    Las perlas ahora toman más tiempo en comerse (pasan de un tercio a la mitad de cualquier comida normal)
+    Las perlas ahora llaman al método heal( float ) de EntityLivingBase en vez de establecer la vida manualmente, desencadenando el evento onLivingHeal()
+    Cambiada la receta de la estrella del nether, ahora usa un bloque de diamante
+    El valor de EMC default para la botella rúnica se ha reducido sustancialmente, ahora es 55,296
+    Agregada la piedra filosofal, usada para las recetas de los accesorios poderosos
+    Bugs conocidos:
+        -Posible problema de perdida de memoria (mínima: un paquete perdido máximo) en el canal del mod que se encarga de abrir el GUI de accesorios
+        -Cuando el jugador muere mientras la regla keepInventory esta activada (true), y en lugar de reaparecer regresa a la pantalla de titulo, los accesorios que tenía equipados (en el GUI de accesorios del mod) desaparecen, en lugar de permanecer en el inventario
+    NO es un bug:
+        -Al tener equipada la Marca sagrada o el Símbolo sagrado y al cabo de 5 segundos no parece haber recuperación de vida, no significa que el accesorio no funcione, sino que 1% (o 2% o 3%) de vida no es ni medio corazón (para un jugador con vida máxima de 20), sin embargo si hay recuperación y se va acomulando, 
+        se puede observar que después de un tiempo la cantidad de recuperada llega a uno y en ese momento se nota la regeneración. Es una cualidad pensada a aplicarse de esta forma, podría en lugar de eso hacer que cada 25 segundos se regenerará el medio corazón, pero no se aprovecharía en casos de que el jugador tenga 
+        una vida máxima mayor a 20 unidades (10 corazones). Mi mod aún no aplica el incremento de vida máxima para el jugador (pienso aplicarla en un futuro con un accesorio o quizá una armadura), sin embargo ya hay mods que sí incrementan la vida máxima del jugador y con los cuales mi mod es compatible (ejemplo Tinkers' Construct)
+
+v0.8.203 Segunda entrega oficial [Beta]
+    Agregada el código para la funcinalidad de comandos y la clase para el comando principal /tomc
+    Agregados a los archivos de lenguajes los usos, erores, etc. para los comandos
+    Agregado un comando para comprobar actualizaciones del mod (no funcional aún)
+    Agregado un comando para especificar valores de EMC (compatibles con projectE) para objetos del mod utilizando el diccionario de minerales (Ore Dictionary), dando al usuario una forma fácil de hacer compatibles los objetos de este mod con los EMC de ProjectE
+    Agregado un comando para quitar los valores de EMC (compatibles con projectE) para objetos del mod utilizando el diccionario de minerales (Ore Dictionary). (Quita los valores agregados por el comando de arriba). No funciona de la manera deseada (quizá por que los comandos de ProjectE no funcionan de manera adecuada)
+    Intento de arreglar un problema de perdida de memoria en los efectos de Emilnator
+    Arreglado un problema en Hoja que no permitía ejecutar en modo solo servidor
+
+v0.8.180 Primer entrega oficial [Beta]
+    Agregada la perla de la fortuna a los objetos dejados por los monstruos en la probabilidad 1 cada 249 veces (0.4%)
+    Ahora se muestra en la consola el tiempo de carga
+
+v0.8.178 Octava entrega [Alfa]
+    Agregado un logo para el mod
+	Cambiados los id para piña (ahora es pina) y perlaPiña (ahora es perlaPina), al cambiar a esta versión, esos objetos desapareceran de los mundos guardados en versiones anteriores
+
+v0.7.176 Séptima entrega [Alfa]
+    Agregada la perla de la fortuna, recupera una cantidad aleatoria de vida y hambre. Agregados sus generaciones en cofres del mundo y el intercambio con aldeanos
+    Cambiando algunos valores de probabilidad para equilibrar el mod:
+        -Aparición de objetos en cofres
+    Modificado Emilnator para que los efectos sean más fuertes (nivel 3) y la probabilidad mayor ()
+
+v0.7.169 Sexta entrega [Alfa]
+    Cambiando algunos valores de probabilidad para equilibrar el mod:
+        -Aparición de objetos en cofres
+        -Generación de árboles en el mundo
+        -Objetos al derrotar los monstruos
+    Arreglado un problema en que el retoño del árbol desaparece cuando no crece el árbol
+    Se quitó del generador del árbol un ciclo de condiciones para impedir que el árbol crezca si hay aire debajo del retoño
+    Agregada la Espada Eterna, posee +11 de daño de ataque, alta durabilidad y alta encantabilidad
+    Cambiado el color del texto de la información de las perlas
+    Agregado Emilnator, alta durabilidad y 5 de protección al equiparse, también da el efecto de velocidad 1 al jugador equipado y
+        tiene 10% de probabilidad de agregar los efectos de ceguera 2, hambre 2, lentitud 2 y debilidad 2 a la entidad atacada
+    Arreglado un error al derrotar los monstruos que causaba un crash en Minecraft 
+
+v0.6.137 Quinta entrega c [Alfa]
+    Arreglados el problema en que los objetos del mod no se generaban en los cofres del mundo
+    Agregada una receta más fácil para el extracto de monstruo
+    Arreglados los colores de las hojas
+    Cambiado el crecimiento de las hojas para que sea más lento
+
+v0.6.135 Quinta entrega b [Alfa]
+    Agregada la generación de árboles al mundo
+    Agregados los objetos del mod a la generación de los cofres del mundo
+
+v0.5.126 Quinta entrega [Alfa]
+    Colores personalizados para las hojas
+    Renderización de las hojas arregladas, ahora se cambian las texturas en los modos de graficos rápido y detallado
+    Los retoños tienen su propio bloque, ahora crecen correctamente
+    Las hojas cambian de color cuando tienen frutas, clic sobre ellas para que tiren su fruta (puedes usar polvo de hueso para que crescan)
+    Las hojas crecen alrededor del árbol (el polvo de hueso igual funciona)
+    Los aldeanos intercambian objetos del mod por esmeraldas
+
+v0.4.85 Cuarta entrega [Alfa]
+    Actualizados los archivos de lenguaje inglés USA y español México
+    Agregado al registro del juego y las texturas para:
+        -Cultivos: Semilla de piña, cultivos de piña
+        -Árboles: bloque para retoño, bloque de hojas
+    Modificados las texturas del limón y de la naranja
+    Agregada la receta para la perla especial (muy cara pero vale la pena)
+    Agregadas recetas de hojas, para cambiar una hoja por una fruta de su tipo
+    Agregada la ayuda para los objetos en el inventario:
+        -Botella rúnica
+        -Perlas
+    Los árboles funcionan, aunque con posibles errores
+    Modificados los eventos al derrotar monstruos cuando tiran frutas, ahora son menos comunes de tirar
+    Agregado al evento de derrotar monstruos las perlas de manzana, de naranja, de limón, de piña y tutifruti
+
+v0.2.43 Tercer entrega [Alfa]
+    Actualizadas las recetas de Botella rúnica
+    Actualizados los archivos de lenguaje inglés USA y español México
+    Agregado al registro del juego y las texturas para:
+        -Frutas: piña
+        -Materiales: botella tutifruti
+        -Bloques: madera naranjo, tablon naranjo, madera limonero, tablon limonero
+    Agregadas las recetas para las perlas de limon y de piña y para la botella tutifruti
+    Compatibilidad con el mod Pam's Harvestcraft
+        -Se pueden usar las naranjas, limones y piñas para las recetas de las perlas y de la botella tutifruti
+        -Agregada un receta especial donde puedes usar cualquier fruta del mod para hacer 9 botellas tutifruti
+
+v0.1.5 Segunda entrega [Alfa]
+    Actualizadas las recetas de Botella rúnica
+    Actualizados los archivos de lenguaje inglés USA y español México
+    Agregadas al OreDictionary los objetos y las frutas, cambiadas las recetas por recetas de OreDictionary
+    Compatibilidad con el mod Tinker's Construct
+        -Ahora se pueden convertir con botella rúnica los bloques de cobalto por bloques de ardita y viceversa, así como los bloques de acero por bloques de alumite y viceversa
+
+v0.1.2 Primer entrega [Alfa]
+    Agregado recetas de Botella rúnica
+        -Se puede usar para convertir un bloque de hierro por uno de oro, un bloque de oro por uno de diamante
+        -Convierte la madera de manzano en un stack de manzanas
+    Actualizados los archivos de lenguaje inglés USA y español México
+    Agregado al registro del juego y las texturas para:
+        -Perlas: manzana, naranja, piña, limón, tutifruti, milagrosa y especial
+        -Frutas: naranja y limón
+        -Materiales: extracto de monstruo
+        -Bloques: madera manzano, tablon manzano
+    Agregado manejador de combustible para madera de manzano
+    Ahora los monstruos dejan botellas rúnicas y frutas al ser derrotados
+    Agregadas las recetas para las perlas de manzana y de naranja
+
+v0.0.1 Inicial
+    Agregado Botella rúnica y sus texturas
+    Agregado archivos de lenguaje para inglés USA y español México
