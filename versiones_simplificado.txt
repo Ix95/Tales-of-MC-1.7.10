@@ -3,7 +3,11 @@ Cambios en las versiones
 -El segundo dígito aumenta cuando se hacen actualizaciones mayores al mod
 -El tercer dígito aumenta cada que se compila el código escrito al ejecutar en eclipse cuando se desarrolla
 
-v0.9.??? Tercera entrega oficial [Beta]
+v0.9.348 Cuarta entrega oficial [Beta]
+    Bug arreglado java.lang.NoClassDefFoundError: scala/actors/threadpool/Arrays
+    Bugs de eventos de accesorios arreglados
+
+v0.9.344 Tercera entrega oficial [Beta]
     Agregada la interfaz para los accesorios (GUI accesorios). Clic en el botón accesorios del inventario o shift+clic derecho mientras tienes un accesorio en la mano para abrir esta interfaz
     Agregados los objetos accesorios; dotan al jugador de efectos útiles al equiparselos en la nueva interfaz de accesorios
         Si la espada con que el jugador ataca es la espada eterna, los efectos siempre son aplicados
